@@ -5,11 +5,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendamento Petshop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <header class="app-header">
+        <h1>Mundo pet</h1>
+    </header>
 
+    <header class="header">
+            <h2>Sua agenda</h2>
+            <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+            <img src="img/calendar-image.svg" alt="calendar-image" class="schedule-icon">
+            <input type="date">
+    </header>
+
+    <main>
+        <div class="list">
+
+            <section class="content" id="morning">
+                <div class="period-header">
+                    <img src="img/sun-fog.svg" alt="sun-fog" class="period-icon">
+                    <p class="period-name">Manhã</p>
+                    <p class="period-time">09h-12h</p>
+                </div>
+                <div class="clients">
+                    <ul>
+                        <li class="list-info">
+                            <p class="appointment-time">09:00</p>
+                            <div class="pet-info">
+                                <p class="pet-name">Thor</p>
+                                <p class="pet-owner">/ Fernanda Costa</p>
+                            </div>
+                            <p class="service">Vacinação</p>
+                            <button class="remove-appointment">Remover agendamento</button>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content" id="afternoon">
+                <div class="period-header">
+                    <img src="img/cloud-sun.svg" alt="cloud-sun" class="period-icon">
+                    <p class="period-name">Tarde</p>
+                    <p class="period-time">13h-18h</p>
+                </div>
+                <div class="clients">
+                    <ul>
+                        <li class="list-info">
+                            <p class="appointment-time">13:00</p>
+                            <div class="pet-info">
+                                <p class="pet-name">Mel</p>
+                                <p class="pet-owner">/ João Souza</p>
+                            </div>
+                            <p class="service">Corte de unhas</p>
+                            <button class="remove-appointment">Remover agendamento</button>
+                        </li>
+
+                        <li class="list-info">
+                            <p class="appointment-time">14:00</p>
+                            <div class="pet-info">
+                                <p class="pet-name">Bella</p>
+                                <p class="pet-owner">/ Pedro Martins</p>
+                            </div>
+                            <p class="service">Aplicação de Anti-pulgas</p>
+                            <button class="remove-appointment">Remover agendamento</button>
+                        </li>
+
+                        <li class="list-info">
+                            <p class="appointment-time">15:00</p>
+                            <div class="pet-info">
+                                <p class="pet-name">Simba</p>
+                                <p class="pet-owner">/ Juliana Rocha</p>
+                            </div>
+                            <p class="service">Tosa Higiênica</p>
+                            <button class="remove-appointment">Remover agendamento</button>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content" id="night">
+                <div class="period-header">
+                    <img src="img/moon-stars.svg" alt="moon-stars" class="period-icon">
+                    <p class="period-name">Noite</p>
+                    <p class="period-time">19h-21h</p>
+                </div>
+                <div class="clients">
+                    <ul>
+                        <li class="list-info">
+                            <p class="appointment-time">20:00</p>
+                            <div class="pet-info">
+                                <p class="pet-name">Max</p>
+                                <p class="pet-owner">/ Camila Santos</p>
+                            </div>
+                            <p class="service">Limpeza de Dentes</p>
+                            <button class="remove-appointment">Remover agendamento</button>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
 
     <script src="scripts.js"></script>
 </body>

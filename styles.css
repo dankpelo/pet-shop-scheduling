@@ -1,0 +1,14 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: "Inter", sans-serif;
+    
+    --content-primary: #FFFFFF;
+    --content-secondary: #98959D;
+    --content-tertiary: #666666;
+    --content-brand: #9282FA;
+}
