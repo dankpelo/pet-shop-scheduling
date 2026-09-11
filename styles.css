@@ -6,9 +6,372 @@
 
 :root {
     font-family: "Inter", sans-serif;
-    
+
     --content-primary: #FFFFFF;
     --content-secondary: #98959D;
     --content-tertiary: #666666;
     --content-brand: #9282FA;
+
+    --background-primary: #151515;
+    --background-secondary: #1E1E1E;
+    --background-tertiary: #23242C;
+    --background-brand: #9282FA;
+    --background-highlights: #BDB4FA;
+
+    --border-primary: #3E3C41;
+    --border-secondary: #86818C;
+    --border-brand: #9282FA;
+    --border-divisor: #353339;
+}
+
+body {
+    background-color: #14151D;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} 
+
+.app-header {
+    position: absolute;
+    top: 0;      
+    left: 0; 
+    padding: 12px 20px;
+    background-color: #2E2C30;
+    border: 1px solid none;
+    border-bottom-right-radius: 12px;
+
+    transition: transform 0.2s, background-color 0.2s;
+    
+}
+
+.app-header:hover {
+    background-color: var(--background-tertiary);
+    transform: scale(1.02);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.header-info {
+    margin-right: 12px;
+    width: 527px;
+}
+
+.header-title {
+    font-family: "Inter Tight", sans-serif;
+    font-size: 24px;
+    color: var(--content-primary);
+    height: 32px;
+    margin-bottom: 4px;
+}
+
+.header-description {
+    color: var(--content-secondary);
+    height: 24px;
+    font-weight: 400;
+}
+
+.header-input {
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    padding: 12px 16px;
+    height: 48px;
+    margin-left: 20px;
+
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    position: relative;
+
+    transition: border 0.2s;
+}
+
+.header-input:hover {
+    border: 1px solid var(--border-secondary);
+}
+
+.date-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--content-secondary);
+    font-family: "Inter";
+    font-size: 16px;
+    margin-left: 8px;
+}
+
+.date-input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.schedule-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.content {
+    background-color: var(--background-tertiary);
+    border: 1px solid none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.period-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border-divisor);
+}
+
+.period-info {
+    display: flex;
+    gap: 12px ;
+}
+
+.period-name {
+    font-family: "Inter Tight", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--content-primary);
+}
+
+.period-time {
+    color: var(--content-secondary);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.clients {
+    padding: 20px;
+}
+
+.list-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-divisor);
+    gap: 16px;
+}
+
+.list-info:last-child {
+    border-bottom: none ;
+}
+
+.appointment-time {
+    padding: 12px;
+    color: var(--content-primary);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.pet-info {
+    display: flex;
+    font-size: 12px;
+    flex: 1;
+}
+
+.pet-name {
+    color: var(--content-primary);
+    font-weight: bold;
+}
+
+.pet-owner {
+    color: var(--content-secondary);
+    font-weight: 600;
+}
+
+.service {
+    text-align: initial;
+    font-size: 12px;
+    color: var(--content-secondary);
+    flex: 1;
+}
+
+.remove-appointment {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    background-color: transparent;
+    border: none;
+    color: var(--content-tertiary);
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.remove-appointment:hover {
+    color: var(--content-primary);
+    text-decoration: underline;
+    transform: scale(1.02);
+}
+
+.add-appointment, .schedule-button {
+    font-family: "Inter Tight", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+
+    position: fixed;
+    bottom: 0;
+    right: 0; 
+    margin-bottom: 33px;
+    margin-right: 30px;
+    padding: 12px 24px;
+    z-index: 0;
+
+    background-color: var(--content-brand);
+    color: #050505;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+
+    box-shadow: 0 0 30px rgba(146, 130, 250, 0.5);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.add-appointment:hover {
+    background-color: var(--background-highlights);
+    transform: scale(1.05);
+}
+
+.schedule {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 716px;
+    width: 477px;
+    padding: 40px;
+
+    background-color: var(--background-tertiary);
+    border: 1px solid var(--background-tertiary);
+    border-radius: 12px;
+}
+
+.schedule::backdrop {
+    backdrop-filter: blur(4px);
+}
+
+.dialog-header {
+    display: block;
+    margin-bottom: 28px;
+}
+
+.dialog-title {
+    font-family: "Inter Tight", sans-serif;
+    font-size: 24px;
+    height: 32px;
+    color: var(--content-primary);
+    margin-bottom: 4px;
+}
+
+.dialog-bio {
+    font-weight: 470;
+    font-size: 14px;
+    height: 24px;
+    color: var(--content-secondary);
+}
+
+.dialog-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.dialog-description {
+    font-weight: bold;
+    font-size: 14px;
+    height: 24px;
+    color: var(--content-primary);
+}
+
+.dialog-input, .dialog-datetime-input {
+    display: flex;
+    flex-direction: row;
+
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+
+    padding: 12px;
+    transition: border 0.2s;
+}   
+
+.dialog-input:hover, .dialog-datetime-input:hover {
+    border: 1px solid var(--border-secondary);
+}
+
+.dialog-input:focus-within, .dialog-datetime-input:focus-within {
+    border: 1px solid var(--border-brand);
+}
+
+.module-input {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    margin-left: 8px;
+    color: var(--content-secondary);
+    width: 100%;
+    height: 100%;
+    outline: none;
+
+    resize: none;
+}
+
+.module-input::placeholder {
+    color: var(--content-secondary);
+    transition: color 0.2s;
+}
+
+.module-input:focus::placeholder {
+    color: var(--content-primary);
+}
+
+.module-input::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.dialog-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.dialog-row-info {
+    flex: 1;
+    margin-bottom: 28px;
+}
+
+.schedule-button {
+    display: flex;
+    margin-left: auto;
+    box-shadow: 0 0 0;
+}
+
+.schedule-button:hover {
+    background-color: #BDB4FA;
+}
+
+.hidden-button {
+    display: none;
 }

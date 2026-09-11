@@ -10,108 +10,188 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/dog-duotone.svg" type="image/x-icon">
 </head>
 
 <body>
     <header class="app-header">
-        <h1>Mundo pet</h1>
+        <a href="#">
+            <img src="img/title.svg" alt="title" >
+        </a>
     </header>
 
-    <header class="header">
-            <h2>Sua agenda</h2>
-            <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
-            <img src="img/calendar-image.svg" alt="calendar-image" class="schedule-icon">
-            <input type="date">
-    </header>
-
-    <main>
-        <div class="list">
-
-            <section class="content" id="morning">
-                <div class="period-header">
-                    <img src="img/sun-fog.svg" alt="sun-fog" class="period-icon">
-                    <p class="period-name">Manhã</p>
-                    <p class="period-time">09h-12h</p>
+    <div>
+        <header class="header">
+                <div class="header-info">
+                    <h2 class="header-title">Sua agenda</h2>
+                    <p class="header-description">Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
                 </div>
-                <div class="clients">
-                    <ul>
-                        <li class="list-info">
-                            <p class="appointment-time">09:00</p>
-                            <div class="pet-info">
-                                <p class="pet-name">Thor</p>
-                                <p class="pet-owner">/ Fernanda Costa</p>
-                            </div>
-                            <p class="service">Vacinação</p>
-                            <button class="remove-appointment">Remover agendamento</button>
-                        </li>
-                    </ul>
+                <div class="header-input">
+                    <img src="img/calendar-image.svg" alt="calendar-image" class="schedule-icon">
+                    <input type="date" class="date-input" placeholder="DD/MM/YYYY">
+                    <img src="img/arrow.svg" alt="" class="date-arrow"></img>
                 </div>
-            </section>
+        </header>
+        <main>
+            <div class="list">
 
-            <section class="content" id="afternoon">
-                <div class="period-header">
-                    <img src="img/cloud-sun.svg" alt="cloud-sun" class="period-icon">
-                    <p class="period-name">Tarde</p>
-                    <p class="period-time">13h-18h</p>
+                <section class="content" id="morning">
+                    <div class="period-header">
+                        <div class="period-info">
+                            <img src="img/sun-fog.svg" alt="sun-fog" class="period-icon">
+                            <p class="period-name">Manhã</p>
+                        </div>
+                        <p class="period-time">09h-12h</p>
+                    </div>
+
+                    <div class="clients">
+                        <ul>
+                            <li class="list-info">
+                                <p class="appointment-time">09:00</p>
+                                <div class="pet-info">
+                                    <p class="pet-name">Thor</p>
+                                    <p class="pet-owner">/ Fernanda Costa</p>
+                                </div>
+                                <p class="service">Vacinação</p>
+                                <a class="remove-appointment">Remover agendamento</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="content" id="afternoon">
+                    <div class="period-header">
+                        <div class="period-info">
+                            <img src="img/cloud-sun.svg" alt="cloud-sun" class="period-icon">
+                            <p class="period-name">Tarde</p>
+                        </div>
+                        <p class="period-time">13h-18h</p>
+                    </div>
+
+                    <div class="clients">
+                        <ul>
+                            <li class="list-info">
+                                <p class="appointment-time">13:00</p>
+                                <div class="pet-info">
+                                    <p class="pet-name">Mel</p>
+                                    <p class="pet-owner">/ João Souza</p>
+                                </div>
+                                <p class="service">Corte de unhas</p>
+                                <a class="remove-appointment">Remover agendamento</a>
+                            </li>
+                            <li class="list-info">
+                                <p class="appointment-time">14:00</p>
+                                <div class="pet-info">
+                                    <p class="pet-name">Bella</p>
+                                    <p class="pet-owner">/ Pedro Martins</p>
+                                </div>
+                                <p class="service">Aplicação de Anti-pulgas</p>
+                                <a class="remove-appointment">Remover agendamento</a>
+                            </li>
+                            <li class="list-info">
+                                <p class="appointment-time">15:00</p>
+                                <div class="pet-info">
+                                    <p class="pet-name">Simba</p>
+                                    <p class="pet-owner">/ Juliana Rocha</p>
+                                </div>
+                                <p class="service">Tosa Higiênica</p>
+                                <a class="remove-appointment">Remover agendamento</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="content" id="night">
+                    <div class="period-header">
+                        <div class="period-info">
+                            <img src="img/moon-stars.svg" alt="moon-stars" class="period-icon">
+                            <p class="period-name">Noite</p>
+                        </div>
+                        <p class="period-time">19h-21h</p>
+                    </div>
+
+                    <div class="clients">
+                        <ul>
+                            <li class="list-info">
+                                <p class="appointment-time">20:00</p>
+                                <div class="pet-info">
+                                    <p class="pet-name">Max</p>
+                                    <p class="pet-owner">/ Camila Santos</p>
+                                </div>
+                                <p class="service">Limpeza de Dentes</p>
+                                <a class="remove-appointment">Remover agendamento</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <dialog class="schedule" open="">
+            <div class="dialog-header">
+                <h1 class="dialog-title">Agende um atendimento</h1>
+                <p class="dialog-bio">Preencha os dados do cliente para realizar o agendamento:</p>
+            </div>
+            
+            <form method="dialog">
+                <div class="dialog-info">
+                    <p class="dialog-description">Nome do tutor</p>
+                    <div class="dialog-input">
+                        <img src="img/user.svg" alt="user-image">
+                        <input type="text" class="module-input" id="input-tutor-name" placeholder="Helena Souza">
+                    </div>
                 </div>
-                <div class="clients">
-                    <ul>
-                        <li class="list-info">
-                            <p class="appointment-time">13:00</p>
-                            <div class="pet-info">
-                                <p class="pet-name">Mel</p>
-                                <p class="pet-owner">/ João Souza</p>
-                            </div>
-                            <p class="service">Corte de unhas</p>
-                            <button class="remove-appointment">Remover agendamento</button>
-                        </li>
 
-                        <li class="list-info">
-                            <p class="appointment-time">14:00</p>
-                            <div class="pet-info">
-                                <p class="pet-name">Bella</p>
-                                <p class="pet-owner">/ Pedro Martins</p>
-                            </div>
-                            <p class="service">Aplicação de Anti-pulgas</p>
-                            <button class="remove-appointment">Remover agendamento</button>
-                        </li>
-
-                        <li class="list-info">
-                            <p class="appointment-time">15:00</p>
-                            <div class="pet-info">
-                                <p class="pet-name">Simba</p>
-                                <p class="pet-owner">/ Juliana Rocha</p>
-                            </div>
-                            <p class="service">Tosa Higiênica</p>
-                            <button class="remove-appointment">Remover agendamento</button>
-                        </li>
-                    </ul>
+                <div class="dialog-info">
+                    <p class="dialog-description">Nome do pet</p>
+                    <div class="dialog-input">
+                        <img src="img/pet-paw.svg" alt="pet-paw-image">
+                        <input type="text" class="module-input" id="input-pet-name" placeholder="Cheddar">
+                    </div>
                 </div>
-            </section>
 
-            <section class="content" id="night">
-                <div class="period-header">
-                    <img src="img/moon-stars.svg" alt="moon-stars" class="period-icon">
-                    <p class="period-name">Noite</p>
-                    <p class="period-time">19h-21h</p>
+                <div class="dialog-info">
+                    <p class="dialog-description">Telefone</p>
+                    <div class="dialog-input">
+                        <img src="img/phone-icon.svg" alt="phone-icon-image">
+                        <input type="tel" class="module-input" id="input-phonenumber" placeholder="(00) 0 0000-0000">
+                    </div>
                 </div>
-                <div class="clients">
-                    <ul>
-                        <li class="list-info">
-                            <p class="appointment-time">20:00</p>
-                            <div class="pet-info">
-                                <p class="pet-name">Max</p>
-                                <p class="pet-owner">/ Camila Santos</p>
-                            </div>
-                            <p class="service">Limpeza de Dentes</p>
-                            <button class="remove-appointment">Remover agendamento</button>
-                        </li>
-                    </ul>
-                </div>
-            </section>
 
-        </div>
-    </main>
+                <div class="dialog-info">
+                    <p class="dialog-description">Descrição do serviço</p>
+                    <div class="dialog-input">
+                        <textarea type="text" class="module-input" id="service-description" rows="3" placeholder="Banho e tosa"></textarea>
+                    </div>
+                </div>
+
+                <div class="dialog-row">
+                    <div class="dialog-row-info">
+                        <p class="dialog-description">Data</p>
+                        <div class="dialog-datetime-input">
+                            <img src="img/calendar-image.svg" alt="calendar-icon">
+                            <input type="date" class="module-input" id="input-date">
+                        </div>
+                    </div>
+
+                    <div class="dialog-row-info">
+                        <p class="dialog-description">Hora</p>
+                        <div class="dialog-datetime-input">
+                            <img src="img/clock.svg" alt="clock-icon">
+                            <input type="time" class="module-input" id="input-time">
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <button class="schedule-button" id="schedule-button">Agendar</button>
+
+        </dialog>
+        <button class="add-appointment" id="add-appointment">Novo agendamento</button>
+    </footer>
 
     <script src="scripts.js"></script>
 </body>
