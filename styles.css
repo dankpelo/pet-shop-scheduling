@@ -172,6 +172,7 @@ body {
     align-items: center;
     border-bottom: 1px solid var(--border-divisor);
     gap: 16px;
+    height: 48px;
 }
 
 .list-info:last-child {
@@ -194,11 +195,13 @@ body {
 .pet-name {
     color: var(--content-primary);
     font-weight: bold;
+    text-transform: capitalize;
 }
 
 .pet-owner {
     color: var(--content-secondary);
     font-weight: 600;
+    text-transform: capitalize;
 }
 
 .service {
@@ -224,7 +227,7 @@ body {
     transform: scale(1.02);
 }
 
-.add-appointment, .schedule-button {
+.add-appointment{
     font-family: "Inter Tight", sans-serif;
     font-size: 16px;
     font-weight: bold;
@@ -252,15 +255,32 @@ body {
     transform: scale(1.05);
 }
 
+.schedule-button {
+    font-family: "Inter Tight", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    background-color: var(--content-brand);
+    color: #050505;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    margin-left: auto;
+    margin-top: 16px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
 .schedule {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    position: relative;
+    
     height: 716px;
     width: 477px;
     padding: 40px;
-
+    
     background-color: var(--background-tertiary);
     border: 1px solid var(--background-tertiary);
     border-radius: 12px;
@@ -268,6 +288,10 @@ body {
 
 .schedule::backdrop {
     backdrop-filter: blur(4px);
+}
+
+.schedule-button:hover {
+    background-color: #BDB4FA;
 }
 
 .dialog-header {
@@ -362,16 +386,38 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     margin-bottom: 28px;
 }
 
-.schedule-button {
+
+.alert-box {
+    background-color: #C93847;
+    padding: 12px;
+    border: 1px solid #C93847;
+    border-radius: 8px;
     display: flex;
-    margin-left: auto;
-    box-shadow: 0 0 0;
+    justify-content: space-between;
+    color: var(--content-primary);
+    opacity: 0;
+    transform: translateY(1px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    bottom: 85px;
+    left: 40px;
+    right: 40px;
 }
 
-.schedule-button:hover {
-    background-color: #BDB4FA;
+.alert-content {
+    display: flex;
+    align-items: center;
 }
 
-.hidden-button {
+.alert-content > span {
+    padding-left: 16px;
+}
+
+.show-alert-box {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden-button, .hidden-li {
     display: none;
 }
